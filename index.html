@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    One Day to Day One
+
+    <script>
+        const students = [
+            {
+                firstName: "Nasya",
+                lastName: "Del Rosario",
+                address: "Nangka"
+            },
+            {
+                firstName: "Eunice",
+                lastName: "Del Rosario",
+                address: "Marikina"
+            },
+            {
+                firstName: "mwhehehe",
+                lastName: "Dasdad",
+                address: "Marikina"
+            },
+            {
+                firstName: "Eunice",
+                lastName: "oihacba",
+                address: "Nangka"
+            }
+        ]
+        //  students.forEach((student)=>{
+        //     console.log(
+        //         `${student.firstName} ${student.lastName} lives in ${student.address}`,
+        //     );
+        //  });
+
+        //  const Nasya = students.find((student) => student.firstName === "Nasya");
+           
+        //  console.log(
+        //     ` found ${Nasya.firstName} ${Nasya.lastName} who lives in ${Nasya.address}`
+        //  );
+        const fromNangka = students.filter(student => student.address === "Nangka");
+        console.log("Students from Nangka")
+        // fromNangka.forEach((student) => 
+        //     console.log(`${student.firstName} ${student.lastName}`)
+        //     );
+        const fromMarikina= students.filter(student => student.address === "Marikina");
+        console.log("Students from Marikina")
+        fromMarikina.forEach((student) => 
+            console.log(`${student.firstName} ${student.lastName}`)
+            );
+            
+        if(fromMarikina.lenght > 0){
+            console.log("there are students from Marikina");
+        } else {
+            console.log("there are no students from Marikina");
+        }
+
+        const hasfromNangka = fromNangka ? true : false;
+        fromNangka
+        ? console.log("there are students from nangka")
+        : ("there are no students from Nangka");
+    </script>
+</body>
+</html>
